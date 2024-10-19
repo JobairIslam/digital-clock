@@ -4,7 +4,8 @@ let mins = document.getElementById("minutes");
 let sec = document.getElementById("seconds");
 
 setInterval(() => {
-  let today = new Date();
+  let today = new Date().toLocaleString("en-US", { timeZone: "Asia/Dhaka" });
+  today = new Date(today); // Create a new Date object from the localized string
   
   // Date parts
   let d = today.getDate();
